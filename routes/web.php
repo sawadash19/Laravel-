@@ -3,7 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemberController;
 use App\Models\Member;
-
 Route::get('/', function () {
     return view('welcome');
 
