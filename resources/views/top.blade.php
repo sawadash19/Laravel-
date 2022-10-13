@@ -28,11 +28,8 @@
         <a href="/register"> >>登録 </a>
     </div>
 </div>
-    <div class="container">
-        
-    <div class="row justify-content-center">
-            <div class="col-sm-8 col-md-6">
-                <table class="table table-bordered">
+
+                <table class="table" border="1">
                     <tr>
                         <th>名前</th>
                         <th>電話番号</th>

@@ -1,6 +1,6 @@
 .top {
     width: 500px;
-    margin-left: 579px;
+    margin: 100px auto;
 }
 
 .registerLink {
@@ -8,8 +8,4 @@
 }
 .topTable {
     margin: 10px;
-}
-
-.form-group {
-    margin-bottom: 20px;
 }
