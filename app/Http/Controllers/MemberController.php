@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Member;
-use Illuminate\Auth\Events\Validated;
 
 class MemberController extends Controller
 {
@@ -32,12 +31,6 @@ class MemberController extends Controller
 
         return redirect('/top');
 
-    }
-
-    protected function validator(array $data) {
-        return Validated::make($data, [
-            'name' => []
-        ])
     }
 
     public function edit(Request $request) {
