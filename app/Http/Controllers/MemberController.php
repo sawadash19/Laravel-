@@ -34,14 +34,6 @@ class MemberController extends Controller
 
     }
 
-    protected function validator(array $data) {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'tel' => ['required','numeic','digits_between:10,11'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique::users'],
-
-        ]);
-    }
 
     public function edit(Request $request) {
 
