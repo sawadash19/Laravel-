@@ -22,17 +22,6 @@ class MemberController extends Controller
         return view('register');
     }
 
-
-    protected function validator(array $data) {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'tel' => ['required','numeic','digits_between:10,11'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique::users']
-
-        ]);
-    }
-
-
     public function memberRegister(Request $request) {
         
         $member = new Member();
@@ -44,6 +33,16 @@ class MemberController extends Controller
         return redirect('/top');
 
     }
+
+    protected function validator(array $data) {
+        return Validator::make($data, [
+            'name' => ['required', 'string', 'max:255'],
+            'tel' => ['required','numeic','digits_between:10,11'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique::users']
+
+        ]);
+    }
+
 
     public function edit(Request $request) {
 
