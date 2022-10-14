@@ -22,6 +22,16 @@
 
 <div style="width: 500px; text-align:center; margin: 100px auto;">
     <h4>会員登録</h4>
+    <!-- バリデーションのエラー表示 -->
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
     <form action="/memberRegister" method="post">
         @csrf
         <div class="form-group">

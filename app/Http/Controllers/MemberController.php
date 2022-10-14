@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Member;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Auth\Events\Validated;
 
 class MemberController extends Controller
@@ -23,7 +24,7 @@ class MemberController extends Controller
     }
 
     public function memberRegister(Request $request) {
-        
+        $this->validator($request->all())->validate();
         $member = new Member();
         $member->name = $request->name;
         $member->tel = $request->tel;
