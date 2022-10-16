@@ -22,8 +22,8 @@
 
 <div style="width: 500px; text-align:center; margin: 100px auto;">
     <h4>会員登録</h4>
-    <!-- バリデーションのエラー表示 -->
-    @if ($errors->any())
+     <!-- バリデーションのエラー表示 -->
+     @if ($errors->any())
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
