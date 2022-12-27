@@ -9,3 +9,12 @@
 .topTable {
     margin: 10px;
 }
+
+.form-control {
+    margin-top: 10px;
+}
+
+button.btn.btn-secondary {
+    margin-top: 10px;
+    background-color: #3399ff;
+}
